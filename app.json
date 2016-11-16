@@ -1,15 +1,13 @@
 {
   "name": "minemutter",
-  "scripts": {
-  },
+  "description": "app test",
   "env": {
   },
-  "formation": {
-  },
   "addons": [
-
+    "heroku-postgresql:hobby-dev"
   ],
-  "buildpacks": [
-
-  ]
+  "scripts": {
+   "postdeploy": "bundle exec rake db:migrate"
+  }
 }
+
